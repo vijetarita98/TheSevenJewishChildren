@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilemma of Memory — Child’s Perceived Reality</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-drawing" aria-hidden="true"></div>
+    <div class="background-vignette" aria-hidden="true"></div>
+
+    <main class="app-panel">
+        <header class="meter" id="meter">
+            <div class="meter-heading">
+                <div>
+                    <p class="eyebrow">Dilemma of Memory</p>
+                    <h1>CHILD'S PERCEIVED REALITY</h1>
+                </div>
+                <div class="stance-block">
+                    <p class="stance-label">Current Narrative Stance</p>
+                    <p id="stance" class="stance balanced">BALANCED</p>
+                </div>
+            </div>
+            <div class="meter-track">
+                <div id="shield-meter" class="meter-shield"></div>
+                <div id="expose-meter" class="meter-expose"></div>
+            </div>
+            <div class="meter-labels">
+                <span class="shield-text">Protection / Myth (<span id="shield-score">0</span>)</span>
+                <span class="expose-text">Confrontation / Exposure (<span id="expose-score">0</span>)</span>
+            </div>
+        </header>
+
+        <section id="scene-view" class="scene-view">
+            <main class="quote-area">
+                <div class="scene-kicker"><span></span><p>Witness Memory &bull; Scene <span id="scene-number">1</span></p><span></span></div>
+                <blockquote id="scene-quote"></blockquote>
+                <div class="quote-divider"></div>
+                <cite id="scene-source"></cite>
+            </main>
+
+            <section class="choice-row" aria-label="Choose a narrative response">
+                <button id="shield-button" class="choice-button shield-choice" type="button">
+                    <span class="choice-card">
+                        <span class="choice-top">
+                            <span class="choice-title">Shield Narrative</span>
+                            <span class="choice-prompt">[ DON'T TELL HER... ]</span>
+                        </span>
+                        <span id="shield-description" class="choice-description"></span>
+                    </span>
+                    <span class="choice-caption">Protect Innocence</span>
+                </button>
+                <button id="expose-button" class="choice-button expose-choice" type="button">
+                    <span class="choice-card">
+                        <span class="choice-top">
+                            <span class="choice-title">Expose Narrative</span>
+                            <span class="choice-prompt">[ TELL HER... ]</span>
+                        </span>
+                        <span id="expose-description" class="choice-description"></span>
+                    </span>
+                    <span class="choice-caption">Confront History</span>
+                </button>
+            </section>
+        </section>
+
+        <section id="summary-view" class="summary-view hidden" aria-live="polite">
+            <p class="eyebrow summary-eyebrow">Historical Narrative Reflection</p>
+            <h2 id="summary-title"></h2>
+            <div class="quote-divider"></div>
+            <p id="summary-description" class="summary-description"></p>
+            <div class="score-breakdown">
+                <div class="score-pill shield-pill">Shielded: <strong id="final-shield">0</strong> / <span id="score-total">11</span></div>
+                <div class="score-pill expose-pill">Exposed: <strong id="final-expose">0</strong> / <span id="expose-total">11</span></div>
+            </div>
+            <button id="restart-button" class="restart-button" type="button">
+                <span>Cycle Complete</span>
+                <strong>[ RESTART ARCHIVAL JOURNEY ]</strong>
+            </button>
+        </section>
+
+        <footer id="progress-footer" class="progress-footer">
+            <div class="progress-info">
+                <span id="progress-label">SCENE 1 / 11</span>
+                <div id="progress-dots" class="progress-dots" aria-label="Scene progress"></div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
