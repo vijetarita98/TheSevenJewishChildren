@@ -3,88 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dilemma of Memory — Child’s Perceived Reality</title>
+    <title>Remix Seven Jewish Children</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="background-drawing" aria-hidden="true"></div>
-    <div class="background-vignette" aria-hidden="true"></div>
-
-    <main class="app-panel">
-        <header class="meter" id="meter">
-            <div class="meter-heading">
+    <div id="background"></div>
+    <main id="main">
+        <section id="landing" aria-labelledby="landing-title">
+            <p class="eyebrow">DILEMMA OF MEMORY</p>
+            <p class="landing-overline">AN INTERACTIVE REFLECTION</p>
+            <h1 id="landing-title">CHILD’S PERCEIVED<br><span>REALITY</span></h1>
+            <p class="landing-intro">How do we tell a child the truth about a difficult world?</p>
+            <button id="start-button" type="button">BEGIN THE JOURNEY <span aria-hidden="true">→</span></button>
+            </p>
+        </section>
+        <header id="meter">
+            <div class="heading">
                 <div>
                     <p class="eyebrow">Dilemma of Memory</p>
                     <h1>CHILD'S PERCEIVED REALITY</h1>
                 </div>
-                <div class="stance-block">
+                <div class="stance-box">
                     <p class="stance-label">Current Narrative Stance</p>
-                    <p id="stance" class="stance balanced">BALANCED</p>
+                    <p id="stance">BALANCED</p>
                 </div>
             </div>
-            <div class="meter-track">
-                <div id="shield-meter" class="meter-shield"></div>
-                <div id="expose-meter" class="meter-expose"></div>
-            </div>
+            <div class="meter-track"><div id="shield-meter"></div><div id="expose-meter"></div></div>
             <div class="meter-labels">
                 <span class="shield-text">Protection / Myth (<span id="shield-score">0</span>)</span>
                 <span class="expose-text">Confrontation / Exposure (<span id="expose-score">0</span>)</span>
             </div>
         </header>
 
-        <section id="scene-view" class="scene-view">
-            <main class="quote-area">
-                <div class="scene-kicker"><span></span><p>Witness Memory &bull; Scene <span id="scene-number">1</span></p><span></span></div>
-                <blockquote id="scene-quote"></blockquote>
-                <div class="quote-divider"></div>
-                <cite id="scene-source"></cite>
-            </main>
-
-            <section class="choice-row" aria-label="Choose a narrative response">
-                <button id="shield-button" class="choice-button shield-choice" type="button">
-                    <span class="choice-card">
-                        <span class="choice-top">
-                            <span class="choice-title">Shield Narrative</span>
-                            <span class="choice-prompt">[ DON'T TELL HER... ]</span>
-                        </span>
-                        <span id="shield-description" class="choice-description"></span>
-                    </span>
-                    <span class="choice-caption">Protect Innocence</span>
+        <section id="scene">
+            <div class="quote-area">
+                <p class="scene-kicker">— WITNESS MEMORY • SCENE <span id="scene-number">1</span> —</p>
+                <blockquote id="narrative"></blockquote>
+                <div class="divider"></div>
+                <p id="source"></p>
+            </div>
+            <div class="choices">
+                <button id="shield-button" class="choice shield">
+                    <span class="choice-title">Shield Narrative</span>
+                    <span class="prompt">[ DON'T TELL HER... ]</span>
+                    <span id="shield-description" class="description"></span>
+                    <span class="caption">Protect Innocence</span>
                 </button>
-                <button id="expose-button" class="choice-button expose-choice" type="button">
-                    <span class="choice-card">
-                        <span class="choice-top">
-                            <span class="choice-title">Expose Narrative</span>
-                            <span class="choice-prompt">[ TELL HER... ]</span>
-                        </span>
-                        <span id="expose-description" class="choice-description"></span>
-                    </span>
-                    <span class="choice-caption">Confront History</span>
+                <button id="expose-button" class="choice expose">
+                    <span class="choice-title">Expose Narrative</span>
+                    <span class="prompt">[ TELL HER... ]</span>
+                    <span id="expose-description" class="description"></span>
+                    <span class="caption">Confront History</span>
                 </button>
-            </section>
+            </div>
         </section>
 
-        <section id="summary-view" class="summary-view hidden" aria-live="polite">
-            <p class="eyebrow summary-eyebrow">Historical Narrative Reflection</p>
+        <section id="summary" class="hidden">
+            <p class="eyebrow">Historical Narrative Reflection</p>
             <h2 id="summary-title"></h2>
-            <div class="quote-divider"></div>
-            <p id="summary-description" class="summary-description"></p>
-            <div class="score-breakdown">
-                <div class="score-pill shield-pill">Shielded: <strong id="final-shield">0</strong> / <span id="score-total">11</span></div>
-                <div class="score-pill expose-pill">Exposed: <strong id="final-expose">0</strong> / <span id="expose-total">11</span></div>
+            <div class="divider"></div>
+            <p id="summary-description"></p>
+            <div class="scores">
+                <span class="shield-pill">Shielded: <strong id="final-shield">0</strong> / 7</span>
+                <span class="expose-pill">Exposed: <strong id="final-expose">0</strong> / 7</span>
             </div>
-            <button id="restart-button" class="restart-button" type="button">
-                <span>Cycle Complete</span>
-                <strong>[ RESTART ARCHIVAL JOURNEY ]</strong>
-            </button>
+            <button id="restart-button">Cycle Complete<br><strong>[ RESTART ARCHIVAL JOURNEY ]</strong></button>
+            <p class="contribute">
+                Want to add your own story and choices to this journey?<br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqLhlc3TUCKuBi8rbYxxPdx50xcF-Rscgp6ShV76RVlZyzaQ/viewform?usp=publish-editor" target="_blank">Click here to contribute</a>
+            </p>
         </section>
 
-        <footer id="progress-footer" class="progress-footer">
-            <div class="progress-info">
-                <span id="progress-label">SCENE 1 / 11</span>
-                <div id="progress-dots" class="progress-dots" aria-label="Scene progress"></div>
-            </div>
+        <footer id="footer">
+            <span id="progress-label">SCENE 1 / 7</span>
+            <div id="progress-dots"></div>
         </footer>
     </main>
     <script src="script.js"></script>
