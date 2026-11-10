@@ -74,11 +74,11 @@ function showScene() {
     document.getElementById("source").textContent = "— " + scene.source;
     document.getElementById("shield-description").textContent = "“" + scene.shield + "”";
     document.getElementById("expose-description").textContent = "“" + scene.expose + "”";
-    document.getElementById("progress-label").textContent = "SCENE " + (sceneIndex + 1) + " / 7";
+    document.getElementById("progress-label").textContent = "SCENE " + (sceneIndex + 1) + " / 11";
     document.getElementById("shield-score").textContent = shieldScore;
     document.getElementById("expose-score").textContent = exposeScore;
-    document.getElementById("shield-meter").style.width = shieldScore / 7 * 100 + "%";
-    document.getElementById("expose-meter").style.width = exposeScore / 7 * 100 + "%";
+    document.getElementById("shield-meter").style.width = shieldScore / 11 * 100 + "%";
+    document.getElementById("expose-meter").style.width = exposeScore / 11 * 100 + "%";
 
     const stance = document.getElementById("stance");
     if (shieldScore === exposeScore) {
@@ -124,10 +124,10 @@ function showSummary() {
     let title;
     let description;
 
-    if (shieldScore === 7) {
+    if (shieldScore === 11) {
         title = "The Child of Absolute Shelter";
         description = "You shielded her completely from every trauma. She inherits a spotless, curated mythology—safe from immediate sorrow, yet unarmed for historical reality.";
-    } else if (exposeScore === 7) {
+    } else if (exposeScore === 11) {
         title = "The Child of Total Truth";
         description = "You withheld nothing. She inherits the unvarnished weight of genocide, war, and displacement—burdened with adult grief before childhood could take root.";
     } else if (shieldScore > exposeScore) {
