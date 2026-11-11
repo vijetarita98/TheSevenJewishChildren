@@ -136,9 +136,6 @@ function showSummary() {
     } else if (exposeScore > shieldScore) {
         title = "The Child of Confrontational Reality";
         description = "You leaned toward unvarnished reality. She perceives the difficult truths of history early, bearing heavy witness to human conflict.";
-    } else {
-        title = "The Child of Fractured Realities";
-        description = "You navigated between shielding and exposure in equal measure. She inherits a divided world where truth and sanctuary constantly contest one another.";
     }
 
     document.getElementById("summary-title").textContent = title;
